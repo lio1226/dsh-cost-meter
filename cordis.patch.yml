@@ -1,0 +1,8 @@
+# dsh-cost-meter bundle patch.
+#
+# One Host row. The name resolves from the profile's own node_modules, where the
+# package sits after `plugin_manager` `install_bundle` linked it. The Client half
+# is picked up from this package's `dsh.client` manifest section — no second row.
+- insert:
+    - id: cost-meter
+      name: dsh-cost-meter

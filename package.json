@@ -1,0 +1,54 @@
+{
+  "name": "dsh-cost-meter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "DeepSeek Harness 会话费用插件：在输入区下方的用量行中新增「当前对话费用」，点开可查看本会话的分项费用（输入 / 缓存命中 / 输出）、峰谷计价时段与账户余额。Session cost plugin for DeepSeek Harness: adds a per-conversation cost pill to the composer's usage dock, expanding into a breakdown of the session's tokens, peak/off-peak pricing and the account balance.",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./pricing": {
+      "default": "./lib/pricing.js"
+    },
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "icon": "./icon.svg",
+  "engines": {
+    "node": ">=22.15"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "cost",
+    "billing",
+    "usage",
+    "balance"
+  ],
+  "files": [
+    "lib",
+    "locale",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md"
+  ],
+  "license": "MIT"
+}

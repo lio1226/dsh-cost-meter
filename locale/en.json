@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session cost",
+    "description": "Adds a per-conversation cost pill to the composer's usage row. Click it for the session's token breakdown priced by model and peak/off-peak phase, plus the account balance."
+  }
+}
